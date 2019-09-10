@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+html, body { 
+  height: 100%; 
+}
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: rgb(207, 207, 207);
+}
+.container{
+  padding: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}

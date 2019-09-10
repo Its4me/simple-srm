@@ -1,0 +1,32 @@
+.weight{
+  margin: 0 1em;
+}
+mat-list{
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+mat-list-item{
+  border-bottom: 1px solid rgb(139, 139, 139);
+  &:last-child{
+    border-bottom: none;
+  }
+}
+.total{
+  padding: 1em;
+  background: #fff;
+  border-radius: 5px;
+}
+.total-cost{
+  margin: 0 1em;
+}
+.description{
+  width: 100%;
+}
+.empty{
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 0 1em 0;
+  padding: 1em 0;
+}

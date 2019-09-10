@@ -1,0 +1,18 @@
+<header>
+  <div class="container">
+    <a class="logo" [routerLink]="''">logo</a>
+    <a class="backet" 
+      mat-flat-button 
+      color="primary"
+      [routerLink]="'/basket'"
+      >
+      Корзина
+      <i class="material-icons">
+        shopping_basket
+      </i>
+      ({{countProductsInBusket}})
+    </a>
+  </div>
+
+</header>
+<router-outlet></router-outlet>

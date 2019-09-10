@@ -1,0 +1,24 @@
+<section class="container">
+  <div  fxLayout="row wrap" fxLayoutGap="1em grid">
+    <div class="col" *ngFor="let product of products">
+      <mat-card  fxLayout="column" fxLayoutAlign="space-between center" >
+        <mat-card-content>
+          <p>
+            {{product.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="cost">Цена: {{product.cost}}$</span>
+          <span class="weight">Вес: {{product.weight}}g</span>
+          <button class="by" 
+            mat-flat-button 
+            [color]="product.inBucket? 'warn' : 'primary' "
+            (click)="addProduct(product)"
+            >{{product.inBucket? 'Уже в корзине' : "В корзину"}}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+   
+  </div>
+</section>

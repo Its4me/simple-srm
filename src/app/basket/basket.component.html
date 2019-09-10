@@ -1,0 +1,38 @@
+<section>
+  <div class="container">
+    <mat-list *ngIf="products.length > 0; else empty">
+      <mat-list-item *ngFor="let product of products">
+        <p class="description">
+          {{product.description}}
+        </p>
+        <p class="weight">{{product.weight}}g</p>
+        <p class="cost">{{product.cost}}$</p>
+        <button 
+          mat-icon-button
+          (click)="deleteProduct(product)">
+          <i class="material-icons">
+            clear
+          </i>
+        </button>
+      </mat-list-item>
+      
+    </mat-list>
+    <ng-template #empty>
+      <p class="empty">Корзина пуста</p>
+    </ng-template>
+    
+    <div class="total"
+      *ngIf="products.length > 0;" 
+      fxLayout="row" 
+      fxLayoutAlign="end center">
+      <div class="total-weigth">Вес: {{totalWeight}} грамм</div>
+      <div class="total-cost">Цена: {{totalPrice}}$</div>
+      <button 
+        mat-flat-button 
+        color="warn"
+        (click)="deleteAll()"
+        >Очистить
+      </button>
+    </div>
+  </div>
+</section>
